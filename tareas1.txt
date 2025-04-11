@@ -1,3 +1,0 @@
-1 | ir al gym | False
-2 | hola | False
-3 | programar | False

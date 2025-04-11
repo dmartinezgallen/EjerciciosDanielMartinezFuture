@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Tareas</title>
+  <style>
+    :root {
+      --color-fondo: #0d0d0d;
+      --color-tarjeta: #ffffff;
+      --color-principal: #0077ff;
+      --color-principal-hover: #005fcc;
+      --color-texto: #333;
+      --radio-borde: 12px;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--color-fondo);
+      background-repeat: repeat;
+      background-size: 120px;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .aplicacion {
+      background-color: var(--color-tarjeta);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      border-radius: var(--radio-borde);
+      padding: 2rem;
+      width: 90%;
+      max-width: 400px;
+      z-index: 1;
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--color-texto);
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: var(--radio-borde);
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: var(--color-principal);
+      color: white;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: var(--radio-borde);
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: var(--color-principal-hover);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .tarea {
+      padding: 0.75rem;
+      background-color: #f9f9f9;
+      margin-bottom: 0.5rem;
+      border-radius: var(--radio-borde);
+      border-left: 5px solid var(--color-principal);
+      color: var(--color-texto);
+    }
+  </style>
+</head>
+<body>
+  <div class="aplicacion">
+    <h2>📋 Mi lista de tareas</h2>
+    <form id="formulario-tarea">
+      <input type="text" id="nueva-tarea" placeholder="Nueva tarea..." required />
+      <button type="submit">➕</button>
+    </form>
+    <ul id="lista-tareas">
+      <!-- Aquí se mostrarán las tareas -->
+    </ul>
+  </div>
+</body>
+</html>
